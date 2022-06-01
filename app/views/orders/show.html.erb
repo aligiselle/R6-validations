@@ -1,20 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @order.customer_id %>
-</p>
+<div class="card shadow p-3 mb-5 bg-white rounded">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">CUSTOMER ORDER</h5>
+    <p>
+      <strong>Customer:</strong>
+      <%= @order.customer_id %>
+    </p>
 
-<p>
-  <strong>Product Name:</strong>
-  <%= @order.product_name %>
-</p>
+    <p>
+      <strong>Product Name:</strong>
+      <%= @order.product_name %>
+    </p>
 
-<p>
-  <strong>Product Count:</strong>
-  <%= @order.product_count %>
-</p>
-
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+    <p>
+      <strong>Product Count:</strong>
+      <%= @order.product_count %>
+    </p>
+    <%= link_to 'Edit', edit_order_path(@order), class: "btn btn-primary" %> |
+    <%= link_to 'Back', orders_path, class: "btn btn-primary" %>
+  </div>
+</div>
